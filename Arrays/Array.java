@@ -1,10 +1,30 @@
-import java.util.Arrays;
 
-class Array{
-    public static void main(String[] args) {
-        int[] number = {10,20,30};
-        int size = number.length;
-        System.out.println(size);
-        System.out.println(Arrays.toString(number));
+class Array {
+    private int[] items;
+    int count;
+
+    public Array(int length) {
+        items = new int[length];
+    }
+
+    // array insertion 
+
+   public void insert(int item){
+   if (items.length == count) {
+    int [] newItems = new int[count * 2];
+    for (int i = 0; i < count; i++) {
+        newItems[i] = items[i];
+    }
+    items = newItems;
+   }
+   items[count++] = item;
+   }
+
+   //array print 
+
+    public void print() {
+        for (int i = 0; i < count; i++) {
+            System.out.println(items[i]);
+        }
     }
 }
