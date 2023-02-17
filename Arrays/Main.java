@@ -7,8 +7,7 @@ class Main {
 
       ArrayClass numbers = new ArrayClass(2);
       numbers.insert(65);
-      numbers.insert(25);
-      numbers.insert(35);
+      
       numbers.print();
     }
 }

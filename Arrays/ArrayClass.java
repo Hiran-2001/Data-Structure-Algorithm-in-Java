@@ -11,6 +11,10 @@ public class ArrayClass {
     public void insert (int item){
         if (items.length==count) {
             int[] newItems = new int[count*2];
+            for (int i = 0; i < count; i++) {
+                newItems[i] = items[i];
+            }
+            items = newItems;
         }
         items[count] = item;
         count++;
@@ -19,6 +23,6 @@ public class ArrayClass {
     public void print(){
         for (int i = 0; i < count; i++) {
             System.out.println(items[i]);
-        }
+        } 
     }
 }
