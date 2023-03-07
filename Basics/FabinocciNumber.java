@@ -10,13 +10,13 @@ public class FabinocciNumber {
         int secondNumber = 1;
         int count = 2;
 
-        // while (count <= n) {
-        //     int temp = secondNumber;
-        //     secondNumber += firstNumber;
-        //     firstNumber = temp;
-        //     System.out.println(secondNumber);
-        //     count++;
-        // }
+        while (count <= n) {
+            int temp = secondNumber;
+            secondNumber += firstNumber;
+            firstNumber = temp;
+            System.out.println(secondNumber);
+            count++;
+        }
         // do {
         //     int temp = secondNumber;
         //     secondNumber += firstNumber;
