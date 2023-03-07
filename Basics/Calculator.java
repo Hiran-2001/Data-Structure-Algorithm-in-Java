@@ -19,7 +19,7 @@ public class Calculator {
                 if (operator == '+') {
                     ans = num1 + num2;
                 }
-                if (operator == '-') {+
+                if (operator == '-') {
                     ans = num1 - num2;
                 }
                 if (operator == '*') {
