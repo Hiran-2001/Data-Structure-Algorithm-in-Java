@@ -1,4 +1,4 @@
-package Methods;
+package JavaMethods;
 
 public class Swap {
     public static void main(String[] args) {
@@ -13,5 +13,4 @@ public class Swap {
             System.out.println(anotherCopy);
         }
     }
-   
 }
