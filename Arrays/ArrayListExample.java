@@ -13,7 +13,7 @@ public class ArrayListExample {
       }
       for(int i = 0;i< list.size();i++){
         System.out.println(list.get(i));
-        System.out.println("size of the array" + " " +list.size());
+        // System.out.println("size of the array" + " " +list.size());
       }
 
     }
