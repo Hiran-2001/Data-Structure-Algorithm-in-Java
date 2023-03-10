@@ -3,7 +3,7 @@ package Basics;
 import java.util.Scanner;
 
 public class FabinocciNumber {
-    public static void main(String[] args) {
+    public static void main(String[] args) {                                                                                                                                                                                                               
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int firstNumber = 0;
@@ -12,9 +12,9 @@ public class FabinocciNumber {
 
         while (count <= n) {
             int temp = secondNumber;
-            secondNumber += firstNumber;
+            secondNumber += firstNumber;                                                                                                                                                                                                                                                                       
             firstNumber = temp;
-            System.out.println(secondNumber);
+            System.out.println(firstNumber);
             count++;
         }
         // do {
