@@ -1,4 +1,4 @@
-package Searching;
+package Searching.LinearSearch;
 
 public class MinNumberTwoD {
     public static void main(String[] args) {

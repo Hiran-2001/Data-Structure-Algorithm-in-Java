@@ -1,4 +1,4 @@
-package Searching;
+package Searching.LinearSearch;
 
 public class FindMaxTwoD {
     public static void main(String[] args) {
