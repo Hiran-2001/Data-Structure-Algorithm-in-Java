@@ -4,27 +4,27 @@ import java.util.Scanner;
 
 public class LinearSearch {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int[] arr = {4,2,7,33,97,4,3,87,12};
-        System.out.println("enter a random number to check that it is in the array or not");
-        int target = input.nextInt();
+      Scanner input = new Scanner(System.in);
 
-       int result = linearSearch(arr , target);
-       System.out.println(result);
-    }
-    static int linearSearch(int[] arr, int target){
-         
-        if(arr.length == 0 ){
-            return -1;
-        }
+      int[] arr = {56,654,16,465,564,21,663,5,36,4};
+        System.out.println("enter a number to search:");
+      int target = input.nextInt();
 
-        for(int index = 0; index < arr.length; index++){
-           int element = arr[index];
-           if(element == target){
-            return index;
-           }
-        }
-       
-        return -1;
+     boolean result =  searchNumber(arr, target);
+     System.out.println(result);
     }
+
+    static boolean searchNumber(int arr[],int target){
+         if(arr.length == 0){
+            return false;
+         } 
+          for(int index = 0;index < arr.length; index++){
+             int element = arr[index];
+             if(target == element){
+               return true;
+             } 
+          }
+         return false;
+    }
+
 }
