@@ -7,7 +7,7 @@ public class SearchString {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter a name");
-        String name = input.nextLine();
+        String name = input.next();
         System.out.println("Enter a letter to find from the name");
         char letter = input.next().charAt(0);
 
