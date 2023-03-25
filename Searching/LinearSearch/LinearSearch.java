@@ -3,28 +3,24 @@ package Searching.LinearSearch;
 import java.util.Scanner;
 
 public class LinearSearch {
-    public static void main(String[] args) {
-      Scanner input = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
 
-      int[] arr = {56,654,16,465,564,21,663,5,36,4};
-        System.out.println("enter a number to search:");
-      int target = input.nextInt();
+    int[] arrName = { 10, 3, 5, 69, 15, 20 };
+    int target = 115;
 
-     boolean result =  searchNumber(arr, target);
-     System.out.println(result);
+    System.out.println(Loop(arrName, target)) ;
+
+  }
+
+  static int Loop(int[] arr, int target) {
+
+    for (int i = 0; i < arr.length; i++) {
+      if (target == arr[i]) {
+        return i;
+      }
     }
-
-    static boolean searchNumber(int arr[],int target){
-         if(arr.length == 0){
-            return false;
-         } 
-          for(int index = 0;index < arr.length; index++){
-             int element = arr[index];
-             if(target == element){
-               return true;
-             } 
-          }
-         return false;
-    }
+    return -1;
+  }
 
 }

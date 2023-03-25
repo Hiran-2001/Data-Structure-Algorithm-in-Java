@@ -2,7 +2,7 @@ package Searching.BinarySearch;
 
 public class PeakIndex {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 8, 5, 14, 3, 1 };
+        int[] arr = { 1, 2, 8, 19, 14, 3, 1 };
         System.out.println(FindIndex(arr));
     }
 
