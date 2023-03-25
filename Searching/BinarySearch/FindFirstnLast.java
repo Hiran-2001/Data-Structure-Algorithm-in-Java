@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FindFirstnLast {
     public static void main(String[] args) {
         int[] nums = { 2, 3, 5, 7, 7, 7, 8, 9 };
-        int target = 6;
+        int target = 7;
         int[] result = searchRange(nums, target);
         System.out.println(Arrays.toString(result));
     }
