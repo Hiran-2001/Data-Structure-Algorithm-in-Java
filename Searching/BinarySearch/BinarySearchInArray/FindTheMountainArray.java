@@ -1,4 +1,4 @@
-package Searching.BinarySearch;
+package Searching.BinarySearch.BinarySearchInArray;
 
 public class FindTheMountainArray {
     public static void main(String[] args) {

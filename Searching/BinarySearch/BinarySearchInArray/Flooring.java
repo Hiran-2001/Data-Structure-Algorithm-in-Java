@@ -1,14 +1,14 @@
-package Searching.BinarySearch;
+package Searching.BinarySearch.BinarySearchInArray;
 
-public class Ceiling {
+public class Flooring {
     public static void main(String[] args) {
-        int[] arr = { 1, 4, 7, 13, 15, 18, 21, 29, 40 };
-        int target = 30;
-        int result = Search(arr, target);
+        int[] arr = { 1, 5, 16, 19, 26, 39, 46, 57, 60 };
+        int target = 17;
+        int result = SearchFlooring(arr, target);
         System.out.println(result);
     }
 
-    static int Search(int[] arr, int target) {
+    static int SearchFlooring(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
 
@@ -23,11 +23,11 @@ public class Ceiling {
                 end = mid - 1;
             } else if (target > arr[mid]) {
                 start = mid + 1;
+  
             } else {
                 return mid;
             }
-
         }
-        return start;
+        return end;
     }
 }
