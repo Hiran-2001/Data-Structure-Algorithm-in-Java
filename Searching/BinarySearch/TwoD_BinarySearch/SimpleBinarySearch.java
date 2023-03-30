@@ -11,26 +11,26 @@ public class SimpleBinarySearch {
                 { 13,14,15,16 }
                 
         };
-        int target = 10;
+        int target = 15;
 
         System.out.println(Arrays.toString(findIndex(arr, target)));
     }
 
-    static int[] findIndex(int[][] arr, int target) {
+    static int[] findIndex(int[][] arr,int target){
         int row = 0;
-        int col = arr.length - 1;
+        int col = arr.length -1;
 
-        while (row < arr.length && col >= 0) {
-            if (arr[row][col] == target) {
-                return new int[] { row, col };
-            }
-            if (arr[row][col] < target) {
-                row++;
-            } else {
+        while(row < arr.length && col >= 0){
+            if(arr[row][col] == target){
+                return new int[] {row,col};
+            } 
+            if(arr[row][col] > target){
                 col--;
+            }else{
+                row++;
             }
-
         }
-        return new int[] { -1, -1 };
+        return new int [] {-1,-1};
     }
+    
 }
