@@ -1,31 +1,46 @@
 package LeetCode;
 
+import java.util.Arrays;
+
+
 public class SingleNumber {
     public static void main(String[] args) {
-        int[] arr = {5,9,4,5,9};
+        int[] arr = { 1, 7, 2, 6 };
+        System.out.println(Arrays.toString(arr));
+        
+        System.out.println(sort(arr));
 
-        int result = findNumber(arr);
-        System.out.println(result);
     }
 
-    static int findNumber(int[] arr){
-        int target = arr[0];
-        int count = 0;
-        int SingleNumber = 0;
-       for(int first=0;first<arr.length;first++){
-        for(int second=1;second<arr.length;second++){
-            if(target != arr[second]){  
-              SingleNumber = target;
-            }else{
+    static int sort(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+            int crctPosition = arr[i] - 1;
 
-                SingleNumber = 0;
+            if (arr[i] <= arr.length && arr[i] != arr[crctPosition]) {
+                swap(arr, i, crctPosition);
+            } else {
+                i++;
             }
         }
 
-       }
-       return SingleNumber;
-      
 
-      
+
+        int missingNumber = 0;
+        for(int j=0;j<arr.length;j++){
+            if(arr[j] != j+1){
+              missingNumber = j+1;
+            }
+        }
+        return missingNumber;
+    }
+
+
+
+
+    static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
     }
 }
